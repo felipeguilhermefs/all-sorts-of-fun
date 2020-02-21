@@ -38,20 +38,24 @@ than the top-down version.
 
 """
 
+from unittest import TestCase
+from random import randint
+
+
 def mergesort(arr: list) -> list:
     """
-    Sort the list using a bottom-up strategy. 
-    
+    Sort the list using a bottom-up strategy.
+
     !!Important the list is mutated
-    
+
     Parameters
     ----------
     arr : list
     The array of numbers to be sorted
-    
+
     Returns
     -------
-    
+
     list
     The same list passed as a parameter. Just for facilitate testing
     and saving a line of code in some cases.
@@ -62,19 +66,20 @@ def mergesort(arr: list) -> list:
         return arr
 
     size = len(arr)
-    
+
     width = 1
     while width < size:
 
         for start in range(0, size, width * 2):
             middle = min(start + width, size)
             end = min(start + 2 * width, size)
-            
+
             __merge(arr, start, middle, end)
-        
+
         width *= 2
-    
+
     return arr
+
 
 def __merge(arr: list, begin: int, middle: int, end: int):
     # indexes to keep track of each half
@@ -97,3 +102,37 @@ def __merge(arr: list, begin: int, middle: int, end: int):
         else:
             arr[i] = right[ri]
             ri += 1
+
+##################
+### Some Tests ###
+##################
+
+
+class TestBottomUpMergeSort(TestCase):
+
+    def test_should_sort_empty(self):
+        self.assertListEqual([], mergesort([]))
+
+    def test_should_sort_single_element_list(self):
+        self.assertListEqual([42], mergesort([42]))
+
+    def test_should_sort_already_sorted_list(self):
+        self.assertListEqual(
+            [-2, -1, 0, 1, 2, 3, 4, 5, 6, 7],
+            mergesort([-2, -1, 0, 1, 2, 3, 4, 5, 6, 7]))
+
+    def test_should_sort_reverse_sorted_list(self):
+        self.assertListEqual(
+            [-2, -1, 0, 1, 2, 3, 4, 5, 6, 7],
+            mergesort([7, 6, 5, 4, 3, 2, 1, 0, -1, -2]))
+
+    def test_should_sort_not_sorted_list(self):
+        self.assertListEqual(
+            [-2, -1, 0, 1, 2, 3, 4, 5, 6, 7],
+            mergesort([1, -1, 6, 2, 4, 3, 5, 0, 7, -2]))
+
+    def test_should_sort_random_list(self):
+        random_size = randint(50, 100)
+        random_list = [randint(-100, 100) for i in range(random_size)]
+
+        self.assertListEqual(sorted(random_list), mergesort(random_list))
