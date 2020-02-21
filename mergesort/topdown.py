@@ -12,7 +12,7 @@ def __mergesort(arr, start, end):
     __mergesort(arr, start, middle)
     __mergesort(arr, middle, end)
     
-    merge(arr, start, middle, end)
+    __merge(arr, start, middle, end)
 
 def __merge(arr: list, begin: int, middle: int, end: int):
     # indexes to keep track of each half

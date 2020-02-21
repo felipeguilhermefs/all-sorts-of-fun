@@ -38,7 +38,7 @@ than the top-down version.
 
 """
 
-def mergesort(arr: list):
+def mergesort(arr: list) -> list:
     """
     Sort the list using a bottom-up strategy. 
     
@@ -59,7 +59,7 @@ def mergesort(arr: list):
 
     # There is no need to sort if it is empty or has a single element
     if len(arr) < 2:
-        return
+        return arr
 
     size = len(arr)
     
@@ -73,6 +73,8 @@ def mergesort(arr: list):
             __merge(arr, start, middle, end)
         
         width *= 2
+    
+    return arr
 
 def __merge(arr: list, begin: int, middle: int, end: int):
     # indexes to keep track of each half

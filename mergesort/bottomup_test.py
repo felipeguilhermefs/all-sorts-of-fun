@@ -5,5 +5,5 @@ from mergesort.bottomup import mergesort
 
 class TestBottomUpMergeSort(TestCase, TestSort):
     
-    def sort(self, arr):
-        mergesort(arr)
+    def sort(self, arr: list) -> list:
+        return mergesort(arr)
