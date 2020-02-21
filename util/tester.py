@@ -2,7 +2,6 @@ from random import randint
 
 class TestSort:
 
-    sort = None
     def sort(self, arr: list) -> list:
         return []
 
