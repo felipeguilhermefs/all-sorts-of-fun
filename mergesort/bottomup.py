@@ -1,12 +1,12 @@
-""" Bottom-Up Mergesort (in place)
+""" Bottom-Up Mergesort
 
-!!Important!! it is a implementation to present the algorithm
+!!Important!! it is a implementation to present the algorithm,
 if you need to sort a list use list.sort for in place, or sorted
 for a new list.
 """
 
-from unittest import TestCase
 from random import randint
+from unittest import TestCase
 
 
 def mergesort(arr: list):
@@ -34,12 +34,12 @@ def mergesort(arr: list):
             middle = min(start + width, size)
             end = min(start + 2 * width, size)
 
-            __merge(arr, start, middle, end)
+            merge(arr, start, middle, end)
 
         width *= 2
 
 
-def __merge(arr: list, begin: int, middle: int, end: int):
+def merge(arr: list, begin: int, middle: int, end: int):
     li = 0
     ri = 0
 

@@ -1,12 +1,12 @@
-""" Top-Down Mergesort (new list)
+""" Top-Down Mergesort
 
-!!Important!! it is a implementation to present the algorithm
+!!Important!! it is a implementation to present the algorithm,
 if you need to sort a list use list.sort for in place, or sorted
 for a new list.
 """
 
-from unittest import TestCase
 from random import randint
+from unittest import TestCase
 
 
 def mergesort(arr: list) -> list:
@@ -32,26 +32,26 @@ def mergesort(arr: list) -> list:
     left = mergesort(arr[:mid])
     right = mergesort(arr[mid:])
 
-    return __merge(left, right)
+    return merge(left, right)
 
 
-def __merge(left: list, right: list) -> list:
+def merge(left: list, right: list) -> list:
     li = 0
     ri = 0
 
     max_left = len(left)
     max_right = len(right)
 
-    result = []
+    merged = []
     for _ in range(max_left + max_right):
         if li < max_left and (ri >= max_right or left[li] <= right[ri]):
-            result.append(left[li])
+            merged.append(left[li])
             li += 1
         else:
-            result.append(right[ri])
+            merged.append(right[ri])
             ri += 1
 
-    return result
+    return merged
 
 ##################
 ### Some Tests ###
