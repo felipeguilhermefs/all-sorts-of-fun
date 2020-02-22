@@ -23,10 +23,11 @@ def mergesort(arr: list) -> list:
     The new sorted list
     """
 
-    if len(arr) < 2:
+    length = len(arr)
+    if length < 2:
         return arr
 
-    mid = len(arr) // 2
+    mid = length // 2
 
     left = mergesort(arr[:mid])
     right = mergesort(arr[mid:])
