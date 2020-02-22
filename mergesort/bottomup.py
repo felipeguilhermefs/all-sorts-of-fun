@@ -25,16 +25,16 @@ def mergesort(arr: list):
     if len(arr) < 2:
         return
 
-    size = len(arr)
+    length = len(arr)
 
     width = 1
-    while width < size:
+    while width < length:
 
-        for start in range(0, size, width * 2):
-            middle = min(start + width, size)
-            end = min(start + 2 * width, size)
+        for offset in range(0, length, width * 2):
+            mid = min(offset + width, length)
+            end = min(offset + 2 * width, length)
 
-            merge(arr, start, middle, end)
+            merge(arr, offset, mid, end)
 
         width *= 2
 
