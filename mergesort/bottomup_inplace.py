@@ -1,4 +1,4 @@
-""" Top-Down Mergesort (in place)
+""" Bottom-Up Mergesort (in place)
 
 !!Important!! it is a implementation to present the algorithm
 if you need to sort a list use list.sort for in place, or sorted
@@ -10,7 +10,7 @@ from random import randint
 
 
 def mergesort(arr: list):
-    """ Sort a list in place using a top-down strategy
+    """ Sort a list in place using a bottom-up strategy
 
     Parameters
     ----------
@@ -22,20 +22,21 @@ def mergesort(arr: list):
     None
     """
 
-    __mergesort(arr, 0, len(arr))
-
-
-def __mergesort(arr: list, start: int, end: int):
-
-    if end - start < 2:
+    if len(arr) < 2:
         return
 
-    mid = (end + start) // 2
+    size = len(arr)
 
-    __mergesort(arr, start, mid)
-    __mergesort(arr, mid, end)
+    width = 1
+    while width < size:
 
-    __merge(arr, start, mid, end)
+        for start in range(0, size, width * 2):
+            middle = min(start + width, size)
+            end = min(start + 2 * width, size)
+
+            __merge(arr, start, middle, end)
+
+        width *= 2
 
 
 def __merge(arr: list, begin: int, middle: int, end: int):
@@ -61,7 +62,7 @@ def __merge(arr: list, begin: int, middle: int, end: int):
 ##################
 
 
-class TestTopDownInplaceMergeSort(TestCase):
+class TestBottomUpInplaceMergeSort(TestCase):
 
     def test_should_sort_empty(self):
         empty_list = []
