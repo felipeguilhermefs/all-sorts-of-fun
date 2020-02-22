@@ -39,7 +39,7 @@ def mergesort(arr: list) -> list:
     slices = (arr[i: i+slice_length] for i in range(0, len(arr), slice_length))
 
     with mp.Pool(processes=cpu_count) as pool:
-        # The slices sorting are distributed
+        # The slices sorting is distributed
         sorted_slices = pool.map(ms, slices)
 
         # We merge iteratively each pair of slices
