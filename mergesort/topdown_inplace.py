@@ -10,7 +10,7 @@ from random import randint
 
 
 def mergesort(arr: list):
-    """ sort a list in place using a top-down strategy
+    """ Sort a list in place using a top-down strategy
 
     Parameters
     ----------
