@@ -10,7 +10,7 @@ from random import randint
 
 
 def mergesort(arr: list):
-    """ Sort a list in place using a bottom-up strategy
+    """ Sort a list using a bottom-up strategy
 
     Parameters
     ----------
@@ -62,7 +62,7 @@ def __merge(arr: list, begin: int, middle: int, end: int):
 ##################
 
 
-class TestBottomUpInplaceMergeSort(TestCase):
+class TestBottomUpMergeSort(TestCase):
 
     def test_should_sort_empty(self):
         empty_list = []
