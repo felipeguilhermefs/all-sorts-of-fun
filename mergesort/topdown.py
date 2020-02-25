@@ -10,19 +10,6 @@ from unittest import TestCase
 
 
 def mergesort(arr: list) -> list:
-    """ Creates a new sorted list using a top-down strategy
-
-    Parameters
-    ----------
-    arr : list
-    The array of numbers to be sorted
-
-    Returns
-    -------
-    list
-    The new sorted list
-    """
-
     length = len(arr)
     if length < 2:
         return arr

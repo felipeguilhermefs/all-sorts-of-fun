@@ -10,18 +10,6 @@ from unittest import TestCase
 
 
 def mergesort(arr: list):
-    """ Sort a list using a bottom-up strategy
-
-    Parameters
-    ----------
-    arr : list
-    The array of numbers to be sorted
-
-    Returns
-    -------
-    None
-    """
-
     if len(arr) < 2:
         return
 

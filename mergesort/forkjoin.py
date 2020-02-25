@@ -17,18 +17,6 @@ from mergesort.topdown import merge
 
 
 def mergesort(arr: list) -> list:
-    """ Uses all processors to sort the list
-
-    Parameters
-    ----------
-    arr : list
-    The array of numbers to be sorted
-
-    Returns
-    -------
-    list
-    The new sorted list
-    """
     if len(arr) < 2:
         return arr
 
