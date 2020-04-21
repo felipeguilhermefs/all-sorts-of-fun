@@ -4,29 +4,35 @@ goarch: amd64
 BenchmarkLomutoQuickSort/100-4      228090	      5581 ns/op	       0 B/op	       0 allocs/op
 BenchmarkSedgewickQuickSort/100-4   197454	      6236 ns/op	       0 B/op	       0 allocs/op
 BenchmarkHoareQuickSort/100-4       189243	      6224 ns/op	       0 B/op	       0 allocs/op
-BenchmarkMergeSort/100-4            38103	     33295 ns/op	   12656 B/op	     318 allocs/op
+BenchmarkBottomUpMergeSort/100-4    82968	     14112 ns/op	    5600 B/op	     201 allocs/op
+BenchmarkTopDownMergeSort/100-4     38103	     33295 ns/op	   12656 B/op	     318 allocs/op
 
 BenchmarkLomutoQuickSort/200-4      104446	     11340 ns/op	       0 B/op	       0 allocs/op
 BenchmarkHoareQuickSort/200-4       94609	     12579 ns/op	       0 B/op	       0 allocs/op
 BenchmarkSedgewickQuickSort/200-4   94420	     12944 ns/op	       0 B/op	       0 allocs/op
-BenchmarkMergeSort/200-4            19006	     60825 ns/op	   29392 B/op	     645 allocs/op
+BenchmarkBottomUpMergeSort/200-4    42170	     28376 ns/op	   12800 B/op	     401 allocs/op
+BenchmarkTopDownMergeSort/200-4     19006	     60825 ns/op	   29392 B/op	     645 allocs/op
 
 BenchmarkLomutoQuickSort/400-4      50347	     23703 ns/op	       0 B/op	       0 allocs/op
 BenchmarkHoareQuickSort/400-4       45258	     26027 ns/op	       0 B/op	       0 allocs/op
 BenchmarkSedgewickQuickSort/400-4   43888	     27392 ns/op	       0 B/op	       0 allocs/op
-BenchmarkMergeSort/400-4            9522	    129650 ns/op	   66960 B/op	    1300 allocs/op
+BenchmarkBottomUpMergeSort/400-4    20786	     58277 ns/op	   28800 B/op	     801 allocs/op
+BenchmarkTopDownMergeSort/400-4     9522	    129650 ns/op	   66960 B/op	    1300 allocs/op
 
 BenchmarkLomutoQuickSort/800-4      23785	     50166 ns/op	       0 B/op	       0 allocs/op
 BenchmarkHoareQuickSort/800-4       22279	     54069 ns/op	       0 B/op	       0 allocs/op
 BenchmarkSedgewickQuickSort/800-4   21219	     58750 ns/op	       0 B/op	       0 allocs/op
-BenchmarkMergeSort/800-4            5280	    269469 ns/op	  150288 B/op	    2611 allocs/op
+BenchmarkBottomUpMergeSort/800-4    9584	    120828 ns/op	   64000 B/op	    1601 allocs/op
+BenchmarkTopDownMergeSort/800-4     5280	    269469 ns/op	  150288 B/op	    2611 allocs/op
 
 BenchmarkLomutoQuickSort/1600-4     10000	    106928 ns/op	       0 B/op	       0 allocs/op
 BenchmarkHoareQuickSort/1600-4      10000	    114294 ns/op	       0 B/op	       0 allocs/op
 BenchmarkSedgewickQuickSort/1600-4  9187	    121018 ns/op	       0 B/op	       0 allocs/op
-BenchmarkMergeSort/1600-4           2024	    594353 ns/op	  340752 B/op	    5235 allocs/op
+BenchmarkBottomUpMergeSort/1600-4   4812	    251530 ns/op	  141056 B/op	    3201 allocs/op
+BenchmarkTopDownMergeSort/1600-4    2024	    594353 ns/op	  340752 B/op	    5235 allocs/op
 
 BenchmarkLomutoQuickSort/3200-4     5167	    231038 ns/op	       0 B/op	       0 allocs/op
 BenchmarkHoareQuickSort/3200-4      4941	    241558 ns/op	       0 B/op	       0 allocs/op
 BenchmarkSedgewickQuickSort/3200-4  4694	    254540 ns/op	       0 B/op	       0 allocs/op
-BenchmarkMergeSort/3200-4           1016	   1179548 ns/op	  797458 B/op	   10486 allocs/op
+BenchmarkBottomUpMergeSort/3200-4   2318	    502324 ns/op	  307456 B/op	    6401 allocs/op
+BenchmarkTopDownMergeSort/3200-4    1016	   1179548 ns/op	  797458 B/op	   10486 allocs/op
