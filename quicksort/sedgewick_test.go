@@ -1,13 +1,14 @@
 package asof
 
 import (
+	helper "asof/helper"
 	"testing"
 )
 
 func TestSedgewickQuickSort(t *testing.T) {
-	TestInt(t, SedgewickQuickSort)
+	helper.TestInt(t, SedgewickQuickSort)
 }
 
 func BenchmarkSedgewickQuickSort(b *testing.B) {
-	BenchmarkInt(b, SedgewickQuickSort)
+	helper.BenchmarkInt(b, SedgewickQuickSort)
 }

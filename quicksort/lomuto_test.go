@@ -1,13 +1,14 @@
 package asof
 
 import (
+	helper "asof/helper"
 	"testing"
 )
 
 func TestLomutoQuickSort(t *testing.T) {
-	TestInt(t, LomutoQuickSort)
+	helper.TestInt(t, LomutoQuickSort)
 }
 
 func BenchmarkLomutoQuickSort(b *testing.B) {
-	BenchmarkInt(b, LomutoQuickSort)
+	helper.BenchmarkInt(b, LomutoQuickSort)
 }

@@ -1,16 +1,16 @@
 package asof
 
-// MergeSort a classical implementation
+// TopDownMergeSort a classical implementation
 // original array is not modified
-func MergeSort(arr []int) []int {
+func TopDownMergeSort(arr []int) []int {
 	length := len(arr)
 	if length < 2 {
 		return arr
 	}
 
 	mid := length / 2
-	left := MergeSort(arr[:mid])
-	right := MergeSort(arr[mid:])
+	left := TopDownMergeSort(arr[:mid])
+	right := TopDownMergeSort(arr[mid:])
 
 	return merge(left, right)
 }
